@@ -9,12 +9,17 @@
     text-transform: uppercase;
     border: none;
     margin-right: 10px;
-    font-size: 0.9rem;
+    font-size: 0.9rem ;
     
 }
 .add-btn{
     background-color: green;
     color: white;
+}
+.del-btn{
+    background-color: #fa9c9c ;
+    color: #000;
+    font-size: small ;
 }
 .grid-container{
     display: grid;

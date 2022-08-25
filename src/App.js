@@ -2,6 +2,18 @@ import Header from "./Header";
 import './App.css';
 
 function App() {
+  let subscribers = [
+    {
+      id: 1,
+      name: 'Shilpi',
+      phone: 137894903
+    },
+    {
+      id: 2,
+      name: 'Geeta',
+      phone: 675900586
+    }
+  ];
   return (
     <>
       <Header />
@@ -12,6 +24,18 @@ function App() {
           <span className="grid-item phone-heading">Phone</span>
         </div>
 
+
+        {
+          subscribers.map(subs => {
+            return <div className="grid-container" key={subs.id}>
+              <span className="grid-item">{subs.name}</span>
+              <span className="grid-item">{subs.phone}</span>
+              <span className="grid-item">
+                <button className="btn del-btn">Delete</button>
+              </span>
+            </div>
+          })
+        }
       </div>
     </>
   );

@@ -1,16 +1,18 @@
 import Header from "./Header";
+import './App.css';
 
 function App() {
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      <button>Add</button>
-      <div><span>Name</span><br />
-        <span>Phone</span>
-      </div>
+      <Header />
+      <div className="main-body">
+        <button className="btn add-btn">Add</button>
+        <div className="grid-container heading">
+          <span className="grid-item name-heading">Name</span>
+          <span className="grid-item phone-heading">Phone</span>
+        </div>
 
+      </div>
     </>
   );
 }

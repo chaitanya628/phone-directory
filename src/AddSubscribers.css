@@ -1,0 +1,28 @@
+.subs-form{
+    margin-top: 20px;
+}
+
+.label-form{
+    font-size: medium;
+    font-weight: 500;
+    color: gray;
+    text-transform: uppercase;
+}
+.input-form{
+    padding: 10px;
+    width: 30%;
+    margin: 4px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.subs-details{
+    background-color: lightgrey;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 30%;
+}
+.subs-info-heading{
+    font-weight: 500;
+}

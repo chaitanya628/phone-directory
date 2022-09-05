@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import "./AddSubscribers.css";
+import { Link } from "react-router-dom";
 
 class AddSubscribers extends Component {
 
@@ -17,12 +18,13 @@ class AddSubscribers extends Component {
         const state = this.state;
         state[e.target.name] = e.target.value;
         this.setState(state);
-        console.log(this.state)
+        
     }
     onFormSubmit = (e) => {
         e.preventDefault();
         this.props.addsub(this.state)
-        this.setState({id:0,name:'',phone: ''})
+        this.setState({ id: 0, name: '', phone: '' })
+        this.props.history.push("/")
     }
 
     render() {
@@ -31,7 +33,7 @@ class AddSubscribers extends Component {
             <div>
                 <Header heading="Add Subscribers" />
                 <div className="main-body">
-                    <button className="btn">Back</button>
+                    <Link to="/"><button className="btn">Back</button></Link>
                     <form className="subs-form" onSubmit={this.onFormSubmit}>
                         <label htmlFor="name" className="label-form">Name:</label><br />
                         <input type="text" className="input-form" id="name" name="name" onChange={this.inputChangeHandler} /><br /><br />

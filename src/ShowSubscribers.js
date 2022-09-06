@@ -12,8 +12,11 @@ class ShowSubscribers extends Component {
     //         subscribersList: []
     //     }
     // }
-
+    onDelete = (subscirberId) => {
+        this.props.deleteSubscriberHandler(subscirberId)
+    }
     render() {
+        
         
         return (
             <div>
@@ -32,7 +35,7 @@ class ShowSubscribers extends Component {
                                 <span className="grid-item">{subs.name}</span>
                                 <span className="grid-item">{subs.phone}</span>
                                 <span className="grid-item">
-                                    <button className="btn del-btn">Delete</button>
+                                    <button className="btn del-btn" onClick={this.onDelete.bind(this,subs.id)}>Delete</button>
                                 </span>
                             </div>
                         })

@@ -22,7 +22,7 @@ class AddSubscribers extends Component {
     }
     onFormSubmit = (e) => {
         e.preventDefault();
-        this.props.addsub(this.state)
+        this.props.addsub(this.state)        
         this.setState({ id: 0, name: '', phone: '' })
         this.props.history.push("/")
     }
